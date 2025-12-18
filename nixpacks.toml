@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ['nodejs_20', 'ruby_3_4', 'postgresql', 'libyaml']
+nixPkgs = ['nodejs_20', 'postgresql', 'libyaml']
 
 [phases.install]
 cmds = [
