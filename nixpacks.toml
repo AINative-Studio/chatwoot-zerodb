@@ -5,9 +5,8 @@ nixPkgs = ['postgresql', 'libyaml']
 cmds = [
   'mkdir -p log tmp/pids tmp/cache',
   'gem install bundler:4.0.0 --no-document',
-  'bundle config set --local deployment true',
   'bundle config set --local without development:test',
-  'bundle install',
+  'bundle install --jobs 4 --retry 3',
   'pnpm install --frozen-lockfile'
 ]
 
