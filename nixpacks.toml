@@ -4,6 +4,7 @@ nixPkgs = ['nodejs_20', 'postgresql', 'libyaml']
 [phases.install]
 cmds = [
   'mkdir -p log tmp/pids tmp/cache',
+  'gem install bundler:4.0.0 --no-document',
   'bundle config set --local deployment true',
   'bundle config set --local without development:test',
   'bundle install',
