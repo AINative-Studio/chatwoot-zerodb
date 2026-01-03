@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Api::V1::Accounts::Conversations::SemanticSearchController < Api::V1::Accounts::Conversations::BaseController
-  skip_before_action :set_conversation
+  skip_before_action :conversation
   before_action :check_authorization
 
   # POST /api/v1/accounts/:account_id/conversations/semantic_search
