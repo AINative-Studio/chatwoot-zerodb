@@ -8,4 +8,8 @@ module AccessTokenable
   def create_access_token
     AccessToken.create!(owner: self)
   end
+
+  def ensure_access_token
+    access_token || create_access_token
+  end
 end

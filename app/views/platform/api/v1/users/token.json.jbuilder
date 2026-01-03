@@ -1,4 +1,4 @@
-json.access_token @resource.access_token.token
+json.access_token @resource.ensure_access_token.token
 json.expiry nil
 json.user do
   json.id @resource.id
