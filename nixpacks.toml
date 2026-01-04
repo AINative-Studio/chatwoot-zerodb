@@ -17,7 +17,7 @@ cmds = [
 
 [phases.release]
 cmds = [
-  'SECRET_KEY_BASE=$(openssl rand -hex 64) DEVISE_SECRET_KEY=$(openssl rand -hex 64) POSTGRES_STATEMENT_TIMEOUT=600s bundle exec rails db:chatwoot_prepare && echo $SOURCE_VERSION > .git_sha'
+  'echo "Skipping release phase DB operations - migrations run at startup" && echo $SOURCE_VERSION > .git_sha'
 ]
 
 [start]
